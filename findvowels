@@ -1,0 +1,26 @@
+def count_characters(text):
+    vowels = 0
+    consonants = 0
+    digits = 0
+    spaces = 0
+
+    for char in text:
+        if char.lower() in "aeiou":
+            vowels += 1
+        elif char.isalpha():
+            consonants += 1
+        elif char.isdigit():
+            digits += 1
+        elif char.isspace():
+            spaces += 1
+
+    return vowels, consonants, digits, spaces
+
+
+# Example
+v, c, d, s = count_characters("Python 123")
+
+print("Vowels:", v)
+print("Consonants:", c)
+print("Digits:", d)
+print("Spaces:", s)
